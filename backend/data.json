@@ -1,0 +1,16 @@
+[
+  {
+    "text": "Water shortage in Rohini",
+    "sentiment": "negative",
+    "score": -0.6,
+    "ward": "Rohini",
+    "topic": "water"
+  },
+  {
+    "text": "Good electricity supply in Dwarka",
+    "sentiment": "positive",
+    "score": 0.8,
+    "ward": "Dwarka",
+    "topic": "electricity"
+  }
+]  
