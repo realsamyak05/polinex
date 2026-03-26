@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>POLINEX Dashboard</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+</head>
+
+<body>
+
+<header>
+    <h1>POLINEX</h1>
+
+    <div>
+        <button id="loadBtn">Analyze</button>
+        <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+</header>
+
+<section class="grid">
+    <div class="card">
+        <h3> Sentiments</h3>
+        <p>Positive: <span id="pos">-</span></p>
+        <p>Negative: <span id="neg">-</span></p>
+        <p>Neutral: <span id="neu">-</span></p>
+    </div>
+
+    <div class="card">
+        <h3> Top Topics</h3>
+        <ul id="topics"></ul>
+    </div>
+
+    <div class="card">
+        <h3> Average Score</h3>
+        <p id="score">-</p>
+    </div>
+
+    <div class="card">
+        <h3> Summary</h3>
+        <p id="summary">-</p>
+    </div>
+</section>
+
+<div class="card full">
+    <h3>Heatmap</h3>
+    <div id="map"></div>
+</div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="api.js"></script>
+<script src="map.js"></script>
+<script src="main.js"></script>
+
+</body>
+</html>
