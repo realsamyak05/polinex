@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>POLINEX Dashboard</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+</head>
+
+<body>
+
+    <script>
+    console.log("INDEX PAGE LOADED");
+</script>
+
+<header>
+  <h1>POLINEX</h1>
+
+  <div>
+    <select id="wardSelect">
+      <option value="">Select Ward</option>
+    </select>
+    <select id="languageSelect">
+  <option value="en">EN</option>
+  <option value="hi">हिंदी</option>
+</select>
+
+    <button onclick="window.location.href='ai.html'">AI Solutions</button>
+    <button class="logout-btn" onclick="logout()">Logout</button>
+  </div>
+</header>
+
+
+<section class="dashboard">
+
+    <!-- LEFT SIDE -->
+    <div class="left-panel">
+
+        <div class="card">
+            <h3 id="sentimentsTitle">Sentiments</h3>
+            <p><span id="posLabel">Positive:</span> <span id="pos">-</span></p>
+            <p><span id="negLabel">Negative:</span> <span id="neg">-</span></p>
+            <p><span id="neuLabel">Neutral:</span> <span id="neu">-</span></p>
+        </div>
+
+        <div class="card">
+            <h3 id="topTopicsTitle">Top Topics</h3>
+            <div id="topics"></div>
+        </div>
+
+    </div>
+
+    <!-- RIGHT SIDE (MAP) -->
+    <div class="right-panel">
+        <div class="card">
+            <h3>Heatmap</h3>
+            <div id="map"></div>
+        </div>
+    </div>
+
+    <!-- BOTTOM -->
+    <div class="bottom-panel">
+
+        <div class="card">
+            <h3 id="scoreTitle">Average Score</h3>
+            <p id="score">-</p>
+        </div>
+
+        <div class="card">
+            <h3 id="summaryTitle">Summary</h3>
+            <p id="summary">-</p>
+        </div>
+
+    </div>
+
+</section>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="map.js"></script>
+<script src="api.js"></script>
+
+<script src="main.js" defer></script>
+
+</body>
+</html>

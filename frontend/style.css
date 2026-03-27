@@ -1,0 +1,250 @@
+/* ===== GLOBAL ===== */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #1a1333, #0b0a1f);
+  color: #ffffff;
+}
+
+/* ===== HEADER ===== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  background: #2a1f4a;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 22px;
+}
+
+header div {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+/* ===== BUTTONS ===== */
+button {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background: #e5e5e5;
+  color: #000;
+  font-weight: 500;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.logout-btn {
+  background: #dcdcdc;
+}
+
+/* ===== DROPDOWN ===== */
+select {
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+  background: #fff;
+  color: #000;
+}
+
+/* ===== GRID ===== */
+.container {
+  padding: 30px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 16px;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+}
+
+/* ===== SUMMARY ===== */
+.summary {
+  margin-top: 20px;
+}
+
+/* ===== HEATMAP ===== */
+#map {
+  height: 350px;
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* ===== LIST ===== */
+ul {
+  padding-left: 18px;
+}
+
+li {
+  margin-bottom: 6px;
+}
+
+/* ===== AI PAGE ===== */
+.ai-container {
+  padding: 30px;
+}
+
+.ai-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 16px;
+  margin-bottom: 20px;
+}
+
+/* ===== SOLUTIONS ===== */
+.solution-block {
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.05);
+}
+
+.solution-block h3 {
+  margin-bottom: 8px;
+}
+
+.solution-block ul {
+  padding-left: 18px;
+}
+
+.solution-block li {
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+
+.solution-summary {
+  margin-top: 20px;
+  font-style: italic;
+  opacity: 0.8;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+
+  .bottom-panel {
+    flex-direction: column;
+  }
+}
+
+/* ===== DASHBOARD LAYOUT ===== */
+.dashboard {
+  display: grid;
+  grid-template-columns: 1.2fr 2.8fr; /* more space to map */
+  gap: 16px;
+  padding: 20px 30px;
+}
+/* LEFT SIDE */
+.left-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* RIGHT SIDE (MAP) */
+.right-panel {
+  display: flex;
+}
+
+/* BOTTOM */
+.bottom-panel {
+  grid-column: span 2;
+  display: flex;
+  gap: 16px;
+}
+
+.bottom-panel .card {
+  flex: 1;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.card p {
+  margin: 6px 0;
+  opacity: 0.9;
+}
+
+.right-panel {
+  width: 100%;
+}
+
+.right-panel .card {
+  width: 100%;
+}
+
+.left-panel .card {
+  min-height: 140px;
+}
+
+.card h3 {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.card {
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+}
+
+.right-panel {
+  grid-row: span 2;
+}
+
+#pos, #neg, #neu {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.chip {
+  display: inline-block;
+  background: rgba(255,255,255,0.1);
+  padding: 6px 12px;
+  margin: 4px;
+  border-radius: 20px;
+  font-size: 13px;
+  transition: 0.2s;
+}
+
+.chip:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+#summary {
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.card {
+  transition: all 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}

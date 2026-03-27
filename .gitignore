@@ -1,0 +1,11 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual env
+venv/
+.env
+backend/.env   ✅ IMPORTANT
+
+# VS Code
+.vscode/

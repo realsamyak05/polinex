@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Solutions - POLINEX</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>POLINEX</h1>
+    <div>
+      <button onclick="window.location.href='index.html'">Dashboard</button>
+      <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+  </header>
+
+  <div class="ai-container">
+
+    <h2>🤖 AI Solutions</h2>
+    <h3 id="ai-ward"></h3>
+
+    <div class="ai-card">
+      <h3>Top Issues</h3>
+      <ul id="ai-topics"></ul>
+    </div>
+
+    <button onclick="generateSolutions()">Generate Solutions</button>
+
+    <div class="ai-card">
+      <h3>Solutions</h3>
+      <div id="ai-output">Click the button to generate solutions...</div>
+    </div>
+
+  </div>
+
+  <script src="ai.js"></script>
+
+</body>
+</html>
